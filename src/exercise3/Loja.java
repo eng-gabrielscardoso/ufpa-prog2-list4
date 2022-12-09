@@ -18,26 +18,23 @@ public class Loja {
 			printOptions();
 			
 			switch (getOption()) {
+			case 0:
+				stop();
+				break;
 			case 1:
 				addLivro();
 				break;
-				
 			case 2:
 				addCD();
 				break;
-				
 			case 3:
 				addDVD();
 				break;
-				
 			case 4:
 				imprimirProdutos();
 				break;
-				
 			case 5:
-				stop();
-				break;
-
+				buscarProduto();
 			default:
 				break;
 			}
@@ -48,11 +45,12 @@ public class Loja {
 	public static void printOptions() {
 		System.out.println("Bem vindo(a) à Loja Lula-Molusco");
 		System.out.println("Escolha uma opção: ");
+		System.out.println("0 - Encerrar");
 		System.out.println("1 - Adicionar produto (Livro)");
 		System.out.println("2 - Adicionar produto (CD)");
 		System.out.println("3 - Adicionar produto (DVD)");
 		System.out.println("4 - Imprimir produtos");
-		System.out.println("5 - Encerrar");
+		System.out.println("5 - Buscar produto");
 	}
 	
 	public static int getOption() {
@@ -74,8 +72,10 @@ public class Loja {
 		double preco = scan.nextDouble();
 		System.out.print("Informe o autor: ");
 		String autor = scan.next();
+		System.out.print("Informe o código de barras: ");
+		String codigoDeBarras = scan.next();
 		
-		produtos.add(new Livro(nome, preco, autor));
+		produtos.add(new Livro(nome, preco, codigoDeBarras, autor));
 		
 		System.out.println("Produto adicionado com sucesso");
 		System.out.println();
@@ -89,8 +89,10 @@ public class Loja {
 		double preco = scan.nextDouble();
 		System.out.print("Informe o número de faixas");
 		int numeroDeFaixas = scan.nextInt();
+		System.out.print("Informe o código de barras: ");
+		String codigoDeBarras = scan.next();
 		
-		produtos.add(new CD(nome, preco, numeroDeFaixas));
+		produtos.add(new CD(nome, preco, codigoDeBarras, numeroDeFaixas));
 		
 		System.out.println("Produto adicionado com sucesso");
 		System.out.println();
@@ -104,8 +106,10 @@ public class Loja {
 		double preco = scan.nextDouble();
 		System.out.print("Informe a duração: ");
 		double duracao = scan.nextDouble();
+		System.out.print("Informe o código de barras: ");
+		String codigoDeBarras = scan.next();
 		
-		produtos.add(new DVD(nome, preco, duracao));
+		produtos.add(new DVD(nome, preco, codigoDeBarras, duracao));
 		
 		System.out.println("Produto adicionado com sucesso");
 		System.out.println();
@@ -117,6 +121,44 @@ public class Loja {
 			System.out.println(produto.toString());
 		}
 		System.out.println();
+	}
+	
+	public static void buscarProduto() {
+		System.out.println("Informe o tipo de busca");
+		System.out.println("1 - Por nome");
+		System.out.println("2 - Por codigo de barras");
+		System.out.print("R: ");
+		int tipoDeBusca = scan.nextInt();
+		
+		if(tipoDeBusca == 1) {
+			System.out.print("Informe o nome: ");
+			String nome = scan.next();
+			
+			
+			for(int i = 0; i < produtos.size(); i++) {
+				if(produtos.get(i).getName() == nome) {
+					System.out.println("Produto encontrado na posição " + i);
+					return;
+				}
+				System.out.println("fjdsakfdsalkjfdsalkj");
+			}
+			
+			System.out.println("Produto não encontrado na base de dados");
+		} else if(tipoDeBusca == 2) {
+			System.out.print("Informe o código de barras: ");
+			String codigoDeBarras = scan.next();
+			
+			for(int i = 0; i < produtos.size(); i++) {
+				if(produtos.get(i).getCodigoDeBarras() == codigoDeBarras) {
+					System.out.println("Produto encontrado na posição " + i);
+					return;
+				}
+			}
+			
+			System.out.println("Produto não encontrado na base de dados");
+		} else {
+			System.out.println("Opção selecionada é inválida");
+		}
 	}
 	
 	public static void stop() {

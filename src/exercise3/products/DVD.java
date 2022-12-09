@@ -13,8 +13,8 @@ public class DVD extends Produto {
 		this.duracao = duracao;
 	}
 	
-	public DVD(String nome, double preco, double duracao) {
-		super(nome, preco);
+	public DVD(String nome, double preco, String codigoDeBarras, double duracao) {
+		super(nome, preco, codigoDeBarras);
 		this.setDuracao(duracao);
 	}
 	

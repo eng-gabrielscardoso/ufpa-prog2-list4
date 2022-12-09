@@ -13,8 +13,8 @@ public class CD extends Produto {
 		this.numeroDeFaixas = numeroDeFaixas;
 	}
 	
-	public CD(String nome, double preco, int numeroDeFaixas) {
-		super(nome, preco);
+	public CD(String nome, double preco, String codigoDeBarras, int numeroDeFaixas) {
+		super(nome, preco, codigoDeBarras);
 		this.setNumeroDeFaixas(numeroDeFaixas);
 	}
 	
