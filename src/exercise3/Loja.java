@@ -140,7 +140,6 @@ public class Loja {
 					System.out.println("Produto encontrado na posição " + i);
 					return;
 				}
-				System.out.println("fjdsakfdsalkjfdsalkj");
 			}
 			
 			System.out.println("Produto não encontrado na base de dados");

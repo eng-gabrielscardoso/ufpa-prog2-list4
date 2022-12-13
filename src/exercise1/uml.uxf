@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="13.3">
+  <zoom_level>4</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>3780</x>
+      <y>848</y>
+      <w>96</w>
+      <h>76</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Interface&gt;&gt;
+Package::exercise1
+CalculosGeometricos
+--
+# Attributes
+--
+# Operations
++calcularPerimetro(): double
++calcularArea(): double
++verLados(): void
++verDados(): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>3904</x>
+      <y>824</y>
+      <w>176</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Public class&gt;&gt;
+Package::exercise1
+ObjetoGeometrico
+--
+# Attributes
+- numeroDeLados: int
+- lados: double[]
+--
+# Operations
++ getNumeroDeLados(): int
++ getLados(): double[]
++ setLados(lados: double[]): void
++ setNumeroDeLados(numeroDeLados: int): void
++ ObjetoGeometrico()
++ ObjetoGeometrico(numeroDeLados: int)
++ ObjetoGeometrico(numeroDeLados: int, lados: double[])</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>3872</x>
+      <y>884</y>
+      <w>40</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;80.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>4136</x>
+      <y>824</y>
+      <w>140</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Public Class&gt;&gt;
+Package::exercise1
+Triangulo
+--
+# Attributes
+- base: double
+- ladoEsquerdo: double
+- ladoDireito: double
+- altura: double
+--
+# Operations
++ getBase(): double
++ setBase(base: double): void
++ getLadoEsquerdo(): double
++ setLadoEsquerdo(ladoEsquerdo: double): void
++ getLadoDireito(): double
++ setLadoDireito(ladoDireito: double): void
++ getAltura(): double
++ setAltura(altura: double): void
++ Triangulo(base: double, altura: double)
++ Triangulo(base: double, ladoEsquerdo: double, ladoDireito: double, altura: double)
++ calcularPerimetro(): double
++ calcularArea(): double
++ verLados(): void
++ verDados(): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>3892</x>
+      <y>988</y>
+      <w>92</w>
+      <h>92</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Public Class&gt;&gt;
+Package::exercise1
+Circulo
+--
+# Attributes
+- raio: double
+--
+# Operations
++ getRaio(): double
++ setRaio(raio: double): void
++ Circulo(raio: double)
++ calcularPerimetro(): double
++ calcularArea(): double
++ verLados(): void
++ verDados(): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>4028</x>
+      <y>988</y>
+      <w>124</w>
+      <h>116</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Public Class&gt;&gt;
+Package::exercise1
+Retangulo
+--
+# Attributes
+- base: double
+- altura: double
+--
+# Operations
++ getBase(): double
++ setBase(base: double): void
++ getAltura(): double
++ setAltura(altura: double): void
++ Retangulo(base: double, altura: double)
++ calcularPerimetro(): double
++ calcularArea(): double
++ verLados(): void
++ verDados(): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>0</x>
+      <y>0</y>
+      <w>76</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;170.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>0</x>
+      <y>0</y>
+      <w>76</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;170.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>3940</x>
+      <y>932</y>
+      <w>12</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>4076</x>
+      <y>808</y>
+      <w>108</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;100.0;60.0;100.0;60.0;10.0;250.0;10.0;250.0;40.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>4056</x>
+      <y>932</y>
+      <w>12</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>3848</x>
+      <y>920</y>
+      <w>52</w>
+      <h>92</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;210.0;110.0;210.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>3812</x>
+      <y>920</y>
+      <w>260</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;480.0;630.0;480.0;630.0;460.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>3852</x>
+      <y>796</y>
+      <w>352</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;130.0;10.0;10.0;860.0;10.0;860.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>4044</x>
+      <y>1168</y>
+      <w>84</w>
+      <h>76</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Public Class&gt;&gt;
+Package::exercise1
+Principal
+--
+# Attributes
+--
+# Operations
++ main(args: String[]): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>3928</x>
+      <y>1076</y>
+      <w>124</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;340.0;290.0;340.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>4080</x>
+      <y>1100</y>
+      <w>12</w>
+      <h>76</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;170.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>4124</x>
+      <y>980</y>
+      <w>120</w>
+      <h>240</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>280.0;10.0;280.0;580.0;10.0;580.0</additional_attributes>
+  </element>
+</diagram>
